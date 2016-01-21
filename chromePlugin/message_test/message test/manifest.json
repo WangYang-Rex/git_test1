@@ -1,0 +1,18 @@
+{
+  "name": "chrome extension message test",
+  "version": "1.0",
+  "permissions":["tabs","<all_urls>"],
+  "browser_action": {
+    "default_icon": "icon.png"
+  },
+  "background": {
+    "scripts": ["background.js"]
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js" : ["contentScript.js"]
+    }
+  ],
+  "manifest_version": 2
+}
