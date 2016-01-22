@@ -3,6 +3,7 @@
   "name": "抓取淘宝商品信息", 
   "version": "1.0", 
   "description": "更具用户填写的商品链接，获取商品的基本信息，填写表单，丰富模板资源库.", 
+  "options_page": "options.html",
   "browser_action": { 
     "default_icon": "logo.jpg" ,
     "default_popup": "popup.html"

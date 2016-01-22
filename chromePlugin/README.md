@@ -43,6 +43,8 @@ Content script与它所在的应用（扩展）并不是完全没有联系。一
 
 可以使用chrome.extension中的方法来获取应用（扩展）中的页面，例如getViews()和getBackgroundPage()。一旦一个页面得到了对应用（扩展）中其它页面的引用，它就可以调用被引用页面中的函数，并操作被引用页面的DOM树。
 
+##数据存储
+localstorage
 
 ##调试
 Web开发者都会的<span style="color:red">F12</span>~
@@ -50,7 +52,8 @@ Web开发者都会的<span style="color:red">F12</span>~
 
 ##红杏 讲解
 chrome.proxy.settings.set
-`
+
+```javascript
 var config = {
     mode: "fixed_servers",
     rules: {
@@ -76,11 +79,12 @@ chrome.proxy.settings.set(
     {value: config},
     function() {
 });
-`
+```
 
 ##作业
 下载当前页面所有图片的扩展
 
 ## 参考资料 
 http://doc.raycloud.com/pages/viewpage.action?pageId=17367106
+
 http://blog.jobbole.com/46608/

@@ -22,6 +22,7 @@
 	};
 
 	var startQuery = function(){
+		
 		var itemUrls = $.trim($("#s-menu-container-input").val());
 		if(itemUrls == ""){
 			alert("您没有输入淘宝地址");
@@ -71,12 +72,18 @@
 		var content = $('<div></div>');
 		content.append('<textarea id="s-menu-container-input" style="width:100%;height:100px;"></textarea>')
 		$("#s_mancard_main .s-menu-container").after('<input type="button" value="获取信息" id="s-menu-container-but" class="btn self-btn bg s_btn">');
-		$("#s_mancard_main .s-menu-container").after('<input type="button" value="123" id="123" class="btn self-btn bg s_btn">');
+		//$("#s_mancard_main .s-menu-container").after('<input type="button" value="123" id="123" class="btn self-btn bg s_btn">');
 		$("#s_mancard_main .s-menu-container").after(content);
 		$("#s-menu-container-but").click(startQuery);
-		$("#123").click(function(){
-			location.reload();
-		})
+		// $("#123").click(function(){
+		// 	location.reload();
+		// })
+		$('.pull-left').append('<input type="button" value="获取信息" id="text1" class="btn self-btn bg s_btn">');
+		$("#text1").on("click",function(){
+			console.log(window.RayCloud);
+			console.log(localStorage.getItem('sellerId'));
+		});
+
 	}
 
 	jQuery(function(){
